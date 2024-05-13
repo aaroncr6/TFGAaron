@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_detalleProducto_carritoCV"
+            android:layout_width="130dp"
+            android:layout_height="165dp"
+            android:layout_margin="16dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/idproducto_detallepedidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
+            android:hint="ID product" />
+
+        <TextView
+            android:id="@+id/name_detallepedidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="65dp"
+            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
+            android:hint="name product" />
+
+        <TextView
+            android:id="@+id/totalprice_detallepedidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="110dp"
+            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
+            android:hint="total price" />
+
+        <TextView
+            android:id="@+id/totalProduc_detallePEdidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="160dp"
+            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
+            android:hint="cantidad total productos" />
+
+        <Button
+            android:id="@+id/btnDeleteProductosCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/totalprice_detallepedidoCV"
+            android:text="Delete"
+            app:cornerRadius="0dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

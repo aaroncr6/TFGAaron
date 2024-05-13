@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Gestor Restaurante</string>
+    <string name="btnCapturaImagen_editActivity">CAPTURA IMAGEN</string>
+    <string name="btnSeleccionaImagen_editActivity">SELECCIONA IMAGEN</string>
+    <string name="btnCancelar_editProducto_admin">CANCELAR</string>
+    <string name="btnGuardar_editProducto_admin">GUARDAR</string>
+
+
+</resources>

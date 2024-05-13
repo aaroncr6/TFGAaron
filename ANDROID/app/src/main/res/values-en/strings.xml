@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestor Restaurante</string>
+    <string name="btnCapturaImagen_editActivity">IMAGE CAPTURE</string>
+    <string name="btnSeleccionaImagen_editActivity">SELECT IMAGE</string>
+    <string name="btnCancelar_editProducto_admin">CANCEL</string>
+    <string name="btnGuardar_editProducto_admin">SAVE</string>
+</resources>

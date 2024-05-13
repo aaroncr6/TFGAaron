@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productoAdminCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgProductoAdminCV"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/lbIdProductoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@id/imgProductoAdminCV"
+            android:ems="10"
+            android:inputType="text"
+            android:text="ID" />
+
+        <TextView
+            android:id="@+id/txtIdProductoCV"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/lbIdProductoCV" />
+
+        <TextView
+            android:id="@+id/lbNombrePRoductoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/imgProductoAdminCV"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/txtNombreProductoCV"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_toRightOf="@id/lbNombrePRoductoCV" />
+
+        <TextView
+            android:id="@+id/lbPrecioProductoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@id/imgProductoAdminCV"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Precio" />
+
+        <TextView
+            android:id="@+id/txtPrecioProductoCV"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="90dp"
+            android:layout_toRightOf="@id/lbPrecioProductoCV" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/admin_pedido_accept"
+        android:title="Aceptar" />
+    <item android:id="@+id/admin_pedido_reject"
+        android:title="Rechazar" />
+
+</menu>
