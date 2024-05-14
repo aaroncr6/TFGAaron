@@ -3,12 +3,15 @@ package es.tfg.gestorrestaurante;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -34,8 +37,8 @@ public class AdminProductosActivity extends AppCompatActivity implements Adapter
     private ProductoAdminAdapter productoAdminAdapter;
     ListView lstProductos;
     List<Producto> listaProductos;
-    private final String CANAL_ID = "1";
-    private static final int NUEVOS_DATOS = 15;
+    List<Producto> listaProductosSinFiltrar;
+    private EditText searchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,23 @@ public class AdminProductosActivity extends AppCompatActivity implements Adapter
 
         lstProductos = findViewById(R.id.listAdminProductos);
         lstProductos.setOnItemClickListener(this);
+
+        searchBar = findViewById(R.id.txtSearch_producto_admin);
+
+        searchBar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filtrarProductos(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
         registerForContextMenu(lstProductos);
         listar();
@@ -122,12 +142,15 @@ public boolean onOptionsItemSelected(MenuItem item) {
                 try {
                     JSONArray jsonArray = new JSONArray(response.content);
                     listaProductos = new ArrayList<>();
+                    listaProductosSinFiltrar = new ArrayList<>(); // Inicializa la lista de productos sin filtrar
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         Long id = jsonObject.getLong("id");
                         String nombre = jsonObject.getString("nombre");
                         double precio = jsonObject.getDouble("precio");
-                        listaProductos.add(new Producto(id, nombre, precio));
+                        Producto producto = new Producto(id, nombre, precio);
+                        listaProductos.add(producto);
+                        listaProductosSinFiltrar.add(producto); // Agrega el producto a la lista de productos sin filtrar
                     }
                     productoAdminAdapter = new ProductoAdminAdapter(getApplicationContext(), R.layout.producto_admin_cardview, listaProductos);
                     lstProductos.setAdapter(productoAdminAdapter);
@@ -142,6 +165,21 @@ public boolean onOptionsItemSelected(MenuItem item) {
                 toast.show();
             }
             });
+    }
+
+    private void filtrarProductos(String texto) {
+        listaProductos.clear();
+        if (texto.isEmpty()) {
+            listaProductos.addAll(listaProductosSinFiltrar);
+        } else {
+            texto = texto.toLowerCase();
+            for (Producto producto : listaProductosSinFiltrar) {
+                if (producto.getNombreProducto().toLowerCase().contains(texto)) {
+                    listaProductos.add(producto);
+                }
+            }
+        }
+        productoAdminAdapter.notifyDataSetChanged();
     }
 
     @Override

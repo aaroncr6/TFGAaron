@@ -18,6 +18,7 @@ public class PedidoDTO
     private Long userId;
     private List<DetallePedidoDTO> listaDetallesPedido;
     private String estado;
+    private LocalDateTime fechaFin;
 
 
     public Long getUserId() {

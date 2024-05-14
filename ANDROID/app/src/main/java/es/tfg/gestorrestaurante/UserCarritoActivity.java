@@ -1,6 +1,11 @@
 package es.tfg.gestorrestaurante;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +13,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,7 +36,7 @@ public class UserCarritoActivity extends AppCompatActivity {
     ListView lstProductos;
     List<DetallePedido> listaProductos;
     Carrito carrito;
-    Button btnBorrar, btnRealizarPedido;
+    Button btnVolver, btnRealizarPedido;
 
     Long userId;
 
@@ -38,14 +46,25 @@ public class UserCarritoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_carrito);
 
         lstProductos = findViewById(R.id.lstCarrito_CarritoUser);
-        btnBorrar = findViewById(R.id.btnBorrarCarrito_CarritoUser);
+        btnVolver = findViewById(R.id.btnVolverCarrito_CarritoUser);
         btnRealizarPedido = findViewById(R.id.btnMakePedido_CarritoUser);
         carrito = ((MyApplication) getApplication()).getCarrito();
 
-        userId = getIntent().getLongExtra("USER_ID", 0);
-        ((MyApplication) getApplication()).getCarrito().setUserId(userId);
+        SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        userId = prefs.getLong("userId", 0);
 
-        if(carrito == null){
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "PedidoChannel";
+            String description = "Canal para notificación de pedidos";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("PedidoChannel", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        if (carrito == null) {
             Toast.makeText(this, "El carrito está vacio", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -55,14 +74,10 @@ public class UserCarritoActivity extends AppCompatActivity {
         carritoAdapter = new CarritoAdapter(getApplicationContext(), R.layout.detalleproducto_carrito_cardview, listaProductos, carrito);
         lstProductos.setAdapter(carritoAdapter);
 
-        btnBorrar.setOnClickListener(new View.OnClickListener() {
+        btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (DetallePedido detallePedido : listaProductos) {
-                    carrito.eliminarProducto(detallePedido);
-                }
-                carritoAdapter.notifyDataSetChanged();
-                Toast.makeText(UserCarritoActivity.this, "Todos los productos han sido borrados del carrito", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
 
@@ -70,18 +85,18 @@ public class UserCarritoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(carrito.getProductos().isEmpty()){
+                if (carrito.getProductos().isEmpty()) {
                     Toast.makeText(UserCarritoActivity.this, "El carrito está vacío", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                Double totalpedido = 0.0;
+                final Double[] totalpedido = {0.0};
                 JSONObject pedido = new JSONObject();
                 try {
                     // Convertir la lista de productos del carrito a un JSONArray
                     JSONArray productosArray = new JSONArray();
                     for (DetallePedido detallePedido : carrito.getProductos()) {
-                        totalpedido = totalpedido + (detallePedido.getProducto().getPrecioProducto() * detallePedido.getCantidad());
+                        totalpedido[0] = totalpedido[0] + (detallePedido.getProducto().getPrecioProducto() * detallePedido.getCantidad());
                         Producto producto = detallePedido.getProducto();
                         JSONObject productoJson = new JSONObject();
                         productoJson.put("idProducto", producto.getIdProducto());
@@ -91,7 +106,7 @@ public class UserCarritoActivity extends AppCompatActivity {
                         productosArray.put(productoJson);
                     }
 
-                    pedido.put("totalPedido", totalpedido);
+                    pedido.put("totalPedido", totalpedido[0]);
                     pedido.put("userId", userId);
                     pedido.put("listaDetallesPedido", productosArray);
                     pedido.put("estado", "Pendiente"); // Añade el estado por defecto
@@ -105,14 +120,26 @@ public class UserCarritoActivity extends AppCompatActivity {
                         try {
                             // Convertir la respuesta a JSONObject
                             JSONObject jsonResponse = new JSONObject(response.content);
-
-                            // Obtener el ID del pedido creado
                             long pedidoId = jsonResponse.getLong("id");
 
-                            Toast.makeText(UserCarritoActivity.this, "Pedido realizado con éxito", Toast.LENGTH_SHORT).show();
+                            // Crear la notificación
+                            NotificationCompat.Builder builder = new NotificationCompat.Builder(UserCarritoActivity.this, "PedidoChannel")
+                                    .setSmallIcon(R.drawable.ic_launcher_foreground) // reemplaza esto con tu propio icono
+                                    .setContentTitle("Pedido realizado con éxito")
+                                    .setContentText("Total pagado: " + totalpedido[0])
+                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                            // Mostrar la notificación
+                            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(UserCarritoActivity.this);
+                            if (ActivityCompat.checkSelfPermission(UserCarritoActivity.this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+
+                                return;
+                            }
+                            notificationManager.notify(0, builder.build());
+                            carrito.vaciarCarrito();
                             carritoAdapter.notifyDataSetChanged();
 
-                            Intent intent = new Intent(UserCarritoActivity.this, UserMainActivity.class);
+                            Intent intent = new Intent(UserCarritoActivity.this, UserProductosActivity.class);
                             startActivity(intent);
                             finish();
 

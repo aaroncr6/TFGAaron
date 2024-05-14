@@ -144,6 +144,10 @@ public class API {
         UtilREST.runQuery(UtilREST.QueryType.GET, URL + "api/getAllPedidos", listener);
     }
 
+    // Obtener todos los pedidos de un usuario por su ID
+    public static void getPedidosByUserId(long id, UtilREST.OnResponseListener listener) {
+        UtilREST.runQuery(UtilREST.QueryType.GET, URL + "api/getPedidosByUserId/" + id, listener);
+    }
 
 }
 

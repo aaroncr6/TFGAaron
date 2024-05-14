@@ -2,6 +2,8 @@ package es.tfg.gestorrestaurante;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,7 +29,6 @@ public class UserProductosActivity extends AppCompatActivity {
     ListView lstProductos;
     List<Producto> listaProductos;
     Carrito carrito;
-    Long userId;
 
     Button btnVolver,btnCarrito;
 
@@ -43,8 +44,6 @@ public class UserProductosActivity extends AppCompatActivity {
         carrito = ((MyApplication) getApplication()).getCarrito();
         listar();
 
-        userId = getIntent().getLongExtra("USER_ID", 0);
-        ((MyApplication) getApplication()).getCarrito().setUserId(userId);
 
         btnVolver.setOnClickListener(v -> {
             finish();
@@ -54,7 +53,6 @@ public class UserProductosActivity extends AppCompatActivity {
             if (carrito != null && !carrito.getProductos().isEmpty()) {
                 Intent intent = new Intent(UserProductosActivity.this, UserCarritoActivity.class);
                 intent.putExtra("CARRITO", carrito);
-                intent.putExtra("USER_ID", userId);
                 startActivity(intent);
             } else {
                 Toast.makeText(UserProductosActivity.this, "El carrito está vacío", Toast.LENGTH_SHORT).show();
@@ -90,5 +88,24 @@ public class UserProductosActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_user_historialpedido, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.menu_user_historial_pedido) {
+            Intent intent = new Intent(this, UserHistorialPedidoActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

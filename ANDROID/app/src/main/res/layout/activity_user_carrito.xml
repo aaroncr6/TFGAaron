@@ -15,20 +15,20 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnBorrarCarrito_CarritoUser"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolverCarrito_CarritoUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnBorrarCarrito_CarritoUser"
+        android:id="@+id/btnVolverCarrito_CarritoUser"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
-        android:text="Borrar"
+        android:text="Volver"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMakePedido_CarritoUser"
@@ -47,6 +47,6 @@
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBorrarCarrito_CarritoUser"
+        app:layout_constraintStart_toEndOf="@+id/btnVolverCarrito_CarritoUser"
         app:layout_constraintTop_toBottomOf="@+id/lstCarrito_CarritoUser" />
 </androidx.constraintlayout.widget.ConstraintLayout>

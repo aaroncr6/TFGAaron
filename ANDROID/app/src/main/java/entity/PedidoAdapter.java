@@ -1,11 +1,15 @@
 package entity;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
 
 import java.util.List;
 
@@ -37,7 +41,23 @@ public class PedidoAdapter extends ArrayAdapter<Pedido> {
 
         estado.setText(pedido.getEstado());
 
+        // Cambia el color de fondo del CardView dependiendo del estado del pedido
+        CardView cardView = (CardView) convertView;
+        switch (pedido.getEstado()) {
+            case "Aceptado":
+                cardView.setCardBackgroundColor(Color.GREEN);
+                break;
+            case "Rechazado":
+                cardView.setCardBackgroundColor(Color.RED);
+                break;
+            default:
+                cardView.setCardBackgroundColor(Color.GRAY);
+                break;
+        }
+
+        idPedido.setTypeface(null, Typeface.BOLD);
+        estado.setTypeface(null, Typeface.BOLD);
+
         return convertView;
     }
-
 }

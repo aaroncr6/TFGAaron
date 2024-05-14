@@ -1,6 +1,7 @@
 package es.tfg.gestorrestaurante;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -83,6 +84,12 @@ public class Login extends AppCompatActivity {
                                 try {
                                     id = Long.valueOf(r.content);
 
+                                    // Guardar el ID del usuario en SharedPreferences
+                                    SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = prefs.edit();
+                                    editor.putLong("userId", id);
+                                    editor.apply();
+
                                     // Después de obtener el ID, obtener el rol del usuario
                                     API.getRolById(id, new UtilREST.OnResponseListener() {
                                         @Override
@@ -93,17 +100,14 @@ public class Login extends AppCompatActivity {
                                             if(rol == 1)
                                             {
                                                 Intent intentAdmin = new Intent(Login.this, AdminMainActivity.class);
-                                                intentAdmin.putExtra("ADMIN_ID", id);
                                                 startActivity(intentAdmin);
                                             } else if (rol == 2)
                                             {
                                                 Intent intentWorker = new Intent(Login.this, WorkerMainActivity.class);
-                                                intentWorker.putExtra("WORKER_ID", id);
                                                 startActivity(intentWorker);
                                             }
                                             else if( rol == 3){
-                                                Intent intentUser = new Intent(Login.this, UserMainActivity.class);
-                                                intentUser.putExtra("USER_ID", id);
+                                                Intent intentUser = new Intent(Login.this, UserProductosActivity.class);
                                                 startActivity(intentUser);
                                             }
                                         }

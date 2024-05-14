@@ -77,8 +77,13 @@ public class PedidoService implements IPedidoService {
         Pedido existingPedido = pedidoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Pedido no encontrado"));
 
-        existingPedido.setTotalPedido(pedidoDTO.getTotalPedido());
+        if(pedidoDTO.getTotalPedido() != 0){
+            existingPedido.setTotalPedido(pedidoDTO.getTotalPedido());
+        }
         existingPedido.setEstado(pedidoDTO.getEstado());
+        if(pedidoDTO.getFechaFin() != null){
+            existingPedido.setFechaFin(pedidoDTO.getFechaFin());
+        }
 
         Pedido updatedPedido = pedidoRepository.save(existingPedido);
         return pedidoMapper.toDTO(updatedPedido);
@@ -90,7 +95,11 @@ public class PedidoService implements IPedidoService {
         pedidoRepository.deleteById(id);
     }
 
-
+    @Override
+    public List<PedidoDTO> findPedidosByUserId(Long userId) {
+        List<Pedido> pedidos = pedidoRepository.findPedidosByUserId(userId);
+        return pedidos.stream().map(pedidoMapper::toDTO).collect(Collectors.toList());
+    }
 
 
 }

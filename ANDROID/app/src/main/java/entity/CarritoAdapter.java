@@ -44,10 +44,20 @@ public class CarritoAdapter extends ArrayAdapter<DetallePedido> {
         precioProducto.setText(String.valueOf(producto.getPrecioProducto() * detallePedido.getCantidad()));
         totalProductos.setText(String.valueOf(detallePedido.getCantidad()));
 
+        // Set the tag for the button to the DetallePedido object
+        btnEliminarProducto.setTag(detallePedido);
+
         btnEliminarProducto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                carrito.eliminarProducto(detallePedido);
+                DetallePedido detallePedido = (DetallePedido) v.getTag();
+
+                if (detallePedido.getCantidad() > 1) {
+                    detallePedido.setCantidad(detallePedido.getCantidad() - 1);
+                } else {
+                    carrito.eliminarProducto(detallePedido);
+                }
+
                 notifyDataSetChanged();
             }
         });

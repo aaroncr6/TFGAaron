@@ -89,6 +89,13 @@ public class GestorRestauranteController
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @Operation(summary = "Metodo que obtiene todos los pedidos de un usuario")
+    @GetMapping("/getPedidosByUserId/{userId}")
+    public ResponseEntity<List<PedidoDTO>> getPedidosByUserId(@PathVariable Long userId) {
+        List<PedidoDTO> pedidos = pedidoService.findPedidosByUserId(userId);
+        return new ResponseEntity<>(pedidos, HttpStatus.OK);
+    }
+
     // Metodos para detallePedido
 
     @Operation(summary = "Metodo que obtiene un detallePedido por su ID")

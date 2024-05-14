@@ -24,4 +24,7 @@ public interface IPedidoService
 
     @Transactional
     void deletePedido(Long id);
+
+    @Transactional
+    List<PedidoDTO> findPedidosByUserId(Long userId);
 }

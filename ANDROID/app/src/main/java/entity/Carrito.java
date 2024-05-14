@@ -35,6 +35,11 @@ public class Carrito implements Serializable {
         productos.remove(detallePedido);
     }
 
+    //Method to empty the order
+    public void vaciarCarrito() {
+        this.productos.clear();
+    }
+
     public double getTotal() {
         double total = 0;
         for (DetallePedido detallePedido : productos) {

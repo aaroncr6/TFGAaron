@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".MyApplication"
@@ -17,9 +18,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AdminPedidosActivity"
-            android:windowSoftInputMode="adjustPan"
+            android:name=".UserHistorialPedidoActivity"
             android:exported="false" />
+        <activity
+            android:name=".AdminPedidosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".UserCarritoActivity"
             android:exported="false" />
@@ -31,7 +35,8 @@
             android:exported="false" />
         <activity
             android:name=".AdminProductosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".AdminMainActivity"
             android:exported="false" />
@@ -40,9 +45,6 @@
             android:exported="false" />
         <activity
             android:name=".SignUp"
-            android:exported="false" />
-        <activity
-            android:name=".UserMainActivity"
             android:exported="false" />
         <activity
             android:name=".Login"

@@ -20,6 +20,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,10 +89,17 @@ public class AdminPedidosActivity extends AppCompatActivity {
     private void updatePedidoState(int position, String newState) {
         Pedido pedido = listaPedidos.get(position);
         pedido.setEstado(newState);
+        LocalDateTime now = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            now = LocalDateTime.now();
+        }
+        pedido.setFechaFin(now);
         JSONObject pedidoJson = new JSONObject();
         try {
             pedidoJson.put("id", pedido.getIdPedido());
             pedidoJson.put("estado", newState);
+            pedidoJson.put("fechaFin", now.toString());
+            pedidoJson.put("totalPedido", pedido.getTotalPedido());
         } catch (JSONException e) {
             e.printStackTrace();
         }
