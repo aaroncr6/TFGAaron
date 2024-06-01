@@ -11,36 +11,57 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="125dp"
-            android:layout_margin="16dp"
-            tools:srcCompat="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_product_user_id_label"
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:id="@+id/id_addproduct_user"
             android:layout_width="100dp"
             android:layout_height="48dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/imageView"
-            android:hint="ID" />
+            android:layout_toEndOf="@id/id_label"
+            android:hint="@string/add_product_user_id_hint" />
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_addproduct_user"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_product_user_name_label" />
 
         <TextView
             android:id="@+id/name_addproduct_user"
             android:layout_width="100dp"
             android:layout_height="48dp"
-            android:layout_marginTop="60dp"
-            android:layout_toEndOf="@id/imageView"
-            android:hint="Nombre" />
+            android:layout_below="@+id/id_addproduct_user"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/name_label"
+            android:hint="@string/add_product_user_name_hint" />
+
+        <TextView
+            android:id="@+id/price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_addproduct_user"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_product_user_price_label" />
 
         <TextView
             android:id="@+id/price_addproduct_user"
             android:layout_width="100dp"
             android:layout_height="48dp"
-            android:layout_marginTop="110dp"
-            android:layout_toEndOf="@id/imageView"
-            android:hint="Precio" />
+            android:layout_below="@+id/name_addproduct_user"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/price_label"
+            android:hint="@string/add_product_user_price_hint" />
 
         <Button
             android:id="@+id/btnAddProduct_user"
@@ -48,10 +69,10 @@
             android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="60dp"
             android:layout_marginRight="20dp"
             android:layout_toRightOf="@id/name_addproduct_user"
-            android:text="Add"
+            android:text="@string/add_product_user_add_button"
             app:cornerRadius="0dp"
             app:icon="@android:drawable/ic_input_add"
             app:iconGravity="textTop"

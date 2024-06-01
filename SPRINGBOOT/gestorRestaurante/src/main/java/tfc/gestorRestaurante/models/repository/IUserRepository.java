@@ -17,8 +17,6 @@ public interface IUserRepository extends CrudRepository<User, Long>
 {
     Optional<User> findByEmail(String email);
     Optional<User> findByUsername(String username);
-    List<User> findByCity(String city);
-    List<User> findByPostalCode(String postalCode);
     @Query(value = "SELECT ur.role_id " +
             "FROM user u " +
             "         INNER JOIN user_role ur ON u.id = ur.user_id " +

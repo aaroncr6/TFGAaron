@@ -11,38 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/img_EditActivity"
-            android:layout_width="69dp"
-            android:layout_height="125dp"
+        <TextView
+            android:id="@+id/label_id_editProducto_admin"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <Button
-            android:id="@+id/capturaImg_EditActivity"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="48dp"
-            android:text="@string/btnCapturaImagen_editActivity"
-            app:layout_constraintEnd_toStartOf="@+id/seleccImg_EditActivity"
-            app:layout_constraintStart_toEndOf="@+id/img_EditActivity"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/seleccImg_EditActivity"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="15dp"
-            android:text="@string/btnSeleccionaImagen_editActivity"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/label_id_editProducto_admin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/capturaImg_EditActivity"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -53,55 +34,99 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="ID producto"
+            android:hint="@string/id_editProducto_admin_hint"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_EditActivity" />
+            app:layout_constraintTop_toBottomOf="@+id/label_id_editProducto_admin" />
+
+        <TextView
+            android:id="@+id/label_nombre_editProducto_admin"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/label_nombre_editProducto_admin"
+            app:layout_constraintBottom_toTopOf="@+id/nombre_editProducto_admin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_editProducto_admin"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/nombre_editProducto_admin"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="11dp"
             android:layout_marginEnd="16dp"
-            android:hint="Nombre Producto"
+            android:hint="@string/nombre_editProducto_admin_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_nombre_editProducto_admin" />
+
+        <TextView
+            android:id="@+id/label_precio_editProducto_admin"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_precio_editProducto_admin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/id_editProducto_admin" />
+            app:layout_constraintTop_toBottomOf="@+id/nombre_editProducto_admin" />
 
         <EditText
             android:id="@+id/precio_editProducto_admin"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="Precio Producto"
+            android:hint="@string/precio_editProducto_admin_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_precio_editProducto_admin" />
+
+        <TextView
+            android:id="@+id/label_descripcion_editProducto_admin"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_descripcion_editProducto_admin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nombre_editProducto_admin" />
+            app:layout_constraintTop_toBottomOf="@+id/precio_editProducto_admin" />
 
         <EditText
             android:id="@+id/descripcion_editProducto_admin"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="Descripcion del producto"
+            android:hint="@string/descripcion_editProducto_admin_hint"
             android:inputType="text|textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/precio_editProducto_admin" />
+            app:layout_constraintTop_toBottomOf="@+id/label_descripcion_editProducto_admin" />
 
         <Button
             android:id="@+id/btnCancelar_editProducto_admin"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="16dp"
             android:text="@string/btnCancelar_editProducto_admin"
             app:cornerRadius="0dp"
             app:layout_constraintEnd_toStartOf="@+id/btnGuardar_editProducto_admin"
@@ -113,7 +138,7 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/btnGuardar_editProducto_admin"
             app:cornerRadius="0dp"

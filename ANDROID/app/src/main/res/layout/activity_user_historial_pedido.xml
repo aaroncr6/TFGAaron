@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginTop="16dp"
-        android:text="Pendientes"
+        android:text="@string/lb_user_history_pendientes"
         app:layout_constraintBottom_toTopOf="@+id/lb_user_history_aceptados"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginTop="8dp"
-        android:text="Aceptados"
+        android:text="@string/lb_user_history_aceptados"
         app:layout_constraintBottom_toTopOf="@+id/lb_user_history_rechazados"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lb_user_history_pendientes" />
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
         android:layout_marginBottom="8dp"
-        android:text="Rechazados"
+        android:text="@string/lb_user_history_rechazados"
         app:layout_constraintBottom_toTopOf="@+id/lstHistorialPedidos_userId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lb_user_history_aceptados" />

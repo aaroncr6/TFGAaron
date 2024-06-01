@@ -9,54 +9,84 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/img_detalleProducto_carritoCV"
-            android:layout_width="130dp"
-            android:layout_height="165dp"
-            android:layout_margin="16dp"
-            tools:srcCompat="@tools:sample/avatars" />
-
         <TextView
             android:id="@+id/idproducto_detallepedidoCV"
             android:layout_width="100dp"
             android:layout_height="48dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
-            android:hint="ID product" />
+            android:layout_toEndOf="@id/label_idproducto_detallepedidoCV"
+            android:hint="@string/detalle_pedido_activity_id_hint" />
 
         <TextView
             android:id="@+id/name_detallepedidoCV"
             android:layout_width="100dp"
             android:layout_height="48dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="65dp"
-            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
-            android:hint="name product" />
+            android:layout_toEndOf="@id/label_name_detallepedidoCV"
+            android:hint="@string/detalle_pedido_activity_name_hint" />
 
         <TextView
             android:id="@+id/totalprice_detallepedidoCV"
             android:layout_width="100dp"
             android:layout_height="48dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="110dp"
-            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
-            android:hint="total price" />
+            android:layout_toEndOf="@id/label_totalprice_detallepedidoCV"
+            android:hint="@string/detalle_pedido_activity_total_price_hint" />
 
         <TextView
             android:id="@+id/totalProduc_detallePEdidoCV"
             android:layout_width="100dp"
             android:layout_height="48dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="160dp"
-            android:layout_toEndOf="@id/img_detalleProducto_carritoCV"
-            android:hint="cantidad total productos" />
+            android:layout_toEndOf="@id/label_totalProduc_detallePEdidoCV"
+            android:hint="@string/detalle_pedido_activity_total_product_hint" />
 
         <Button
             android:id="@+id/btnDeleteProductosCarrito"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="80dp"
             android:layout_marginRight="10dp"
-            android:layout_toEndOf="@id/totalprice_detallepedidoCV"
-            android:text="Delete"
+            android:layout_toEndOf="@id/name_detallepedidoCV"
+            android:text="@string/detalle_pedido_activity_delete_button"
             app:cornerRadius="0dp" />
+
+        <TextView
+            android:id="@+id/label_name_detallepedidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="65dp"
+            android:text="@string/detalle_pedido_activity_name_label" />
+
+        <TextView
+            android:id="@+id/label_totalprice_detallepedidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="110dp"
+            android:text="@string/detalle_pedido_activity_total_price_label" />
+
+        <TextView
+            android:id="@+id/label_totalProduc_detallePEdidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="160dp"
+            android:text="@string/detalle_pedido_activity_total_product_label" />
+
+        <TextView
+            android:id="@+id/label_idproducto_detallepedidoCV"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/detalle_pedido_activity_id_label" />
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

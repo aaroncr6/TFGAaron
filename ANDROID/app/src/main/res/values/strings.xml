@@ -1,9 +1,52 @@
 <resources>
     <string name="app_name">Gestor Restaurante</string>
-    <string name="btnCapturaImagen_editActivity">CAPTURA IMAGEN</string>
-    <string name="btnSeleccionaImagen_editActivity">SELECCIONA IMAGEN</string>
-    <string name="btnCancelar_editProducto_admin">CANCELAR</string>
-    <string name="btnGuardar_editProducto_admin">GUARDAR</string>
+    <string name="add_product_user_id_label">ID:</string>
+    <string name="add_product_user_name_label">Nombre:</string>
+    <string name="add_product_user_price_label">Precio:</string>
+    <string name="add_product_user_add_button">Añadir</string>
+    <string name="add_product_user_id_hint">ID</string>
+    <string name="add_product_user_name_hint">Nombre</string>
+    <string name="add_product_user_price_hint">Precio</string>
+    <string name="detalle_pedido_activity_id_label">ID del producto:</string>
+    <string name="detalle_pedido_activity_name_label">Nombre del producto:</string>
+    <string name="detalle_pedido_activity_total_price_label">Precio total:</string>
+    <string name="detalle_pedido_activity_total_product_label">Cantidad total de productos:</string>
+    <string name="detalle_pedido_activity_delete_button">Eliminar</string>
+    <string name="detalle_pedido_activity_id_hint">ID del producto</string>
+    <string name="detalle_pedido_activity_name_hint">Nombre del producto</string>
+    <string name="detalle_pedido_activity_total_price_hint">Precio total</string>
+    <string name="detalle_pedido_activity_total_product_hint">Cantidad total de productos</string>
+    <string name="admin_id_producto_cv">ID producto</string>
+    <string name="admin_nombre_producto_cv">nombre producto</string>
+    <string name="admin_precio_producto_cv">precio producto</string>
+    <string name="lb_user_history_pendientes">Pendientes</string>
+    <string name="lb_user_history_aceptados">Aceptados</string>
+    <string name="lb_user_history_rechazados">Rechazados</string>
+    <string name="label_id_editProducto_admin">ID Producto</string>
+    <string name="id_editProducto_admin_hint">ID producto</string>
+    <string name="label_nombre_editProducto_admin">Nombre producto</string>
+    <string name="nombre_editProducto_admin_hint">Nombre Producto</string>
+    <string name="label_precio_editProducto_admin">Precio producto</string>
+    <string name="precio_editProducto_admin_hint">Precio Producto</string>
+    <string name="label_descripcion_editProducto_admin">Descripcion</string>
+    <string name="descripcion_editProducto_admin_hint">Descripcion del producto</string>
+    <string name="btnCancelar_editProducto_admin">Cancelar</string>
+    <string name="btnGuardar_editProducto_admin">Guardar</string>
+    <string name="usuario_hint">Usuario</string>
+    <string name="contrasenya_hint">Contraseña</string>
+    <string name="login_text">Iniciar sesión</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="signup_button">Registrarse</string>
+    <string name="signup_text">Registrarse</string>
+    <string name="usuario_signup_hint">Usuario</string>
+    <string name="contrasenya_signup_hint">Contraseña</string>
+    <string name="register_button">Registrar</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="barraBusqueda">Buscar</string>
+    <string name="volver_button_user_carrito">Volver</string>
+    <string name="realizar_pedido_button">Realizar Pedido</string>
+
+
 
 
 </resources>
