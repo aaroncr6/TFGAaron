@@ -15,12 +15,28 @@ import java.util.List;
 
 import es.tfg.gestorrestaurante.R;
 
+/**
+ * Clase PedidoAdapter que extiende de ArrayAdapter<Pedido> y se encarga de adaptar los datos de los
+ * pedidos a un CardView para mostrarlos en la interfaz de usuario.
+ */
 public class PedidoAdapter extends ArrayAdapter<Pedido> {
 
+    /**
+     * Constructor de la clase PedidoAdapter.
+     * @param context Contexto de la aplicación.
+     * @param pedidos Lista de pedidos a adaptar.
+     */
     public PedidoAdapter(Context context, List<Pedido> pedidos) {
         super(context, R.layout.pedidos_admin_cardview, pedidos);
     }
 
+    /**
+     * Método getView que se encarga de adaptar los datos de los pedidos a un CardView.
+     * @param position Posición del pedido en la lista.
+     * @param convertView Vista del CardView.
+     * @param parent Grupo de vistas padre.
+     * @return Vista del CardView con los datos del pedido.
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -32,7 +48,7 @@ public class PedidoAdapter extends ArrayAdapter<Pedido> {
         TextView idPedido = convertView.findViewById(R.id.txtIdPedido_pedido_adminCV);
         TextView estado = convertView.findViewById(R.id.txtEstado_pedido_adminCV);
 
-        // Verificar si el ID del pedido es null o 0
+        // Mostrar el ID del pedido si está disponible
         if (pedido.getIdPedido() == null || pedido.getIdPedido() == 0) {
             idPedido.setText("ID no disponible");
         } else {
@@ -41,20 +57,21 @@ public class PedidoAdapter extends ArrayAdapter<Pedido> {
 
         estado.setText(pedido.getEstado());
 
-        // Cambia el color de fondo del CardView dependiendo del estado del pedido
+        // Cambiar el color del CardView en función del estado del pedido
         CardView cardView = (CardView) convertView;
         switch (pedido.getEstado()) {
             case "Aceptado":
-                cardView.setCardBackgroundColor(Color.GREEN);
+                cardView.setCardBackgroundColor(Color.argb(255, 144, 238, 144));
                 break;
             case "Rechazado":
-                cardView.setCardBackgroundColor(Color.RED);
+                cardView.setCardBackgroundColor(Color.argb(255, 255, 192, 192));
                 break;
             default:
-                cardView.setCardBackgroundColor(Color.GRAY);
+                cardView.setCardBackgroundColor(Color.argb(255, 220, 220, 220));
                 break;
         }
 
+        // Establecer negrita en los textos
         idPedido.setTypeface(null, Typeface.BOLD);
         estado.setTypeface(null, Typeface.BOLD);
 
