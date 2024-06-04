@@ -1,6 +1,5 @@
 package tfc.gestorRestaurante.security;
 
-
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,6 +17,10 @@ import tfc.gestorRestaurante.models.entity.User;
 import tfc.gestorRestaurante.models.services.User.CustomUserDetailsService;
 import java.io.IOException;
 
+/**
+ * Filtro de autenticación JWT.
+ * Este filtro se encarga de procesar las solicitudes entrantes y validar los tokens JWT.
+ */
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter
 {
@@ -30,6 +33,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
 
+    /**
+     * Método que se ejecuta una vez por cada solicitud.
+     * Este método se encarga de procesar la solicitud y validar el token JWT.
+     * @param request La solicitud entrante.
+     * @param response La respuesta a enviar.
+     * @param filterChain La cadena de filtros a aplicar.
+     * @throws ServletException Si ocurre un error al procesar la solicitud.
+     * @throws IOException Si ocurre un error de entrada/salida.
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
@@ -76,7 +88,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter
         }
     }
 
-    // Procesamos el Token del Request
+    /**
+     * Método que se encarga de extraer el token JWT de la solicitud.
+     * @param request La solicitud entrante.
+     * @return El token JWT extraído de la solicitud.
+     */
     private String getJwtFromRequest(HttpServletRequest request) {
         // Tomamos la cabecera
         String bearerToken = request.getHeader(JwtTokenProvider.TOKEN_HEADER);

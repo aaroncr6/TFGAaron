@@ -8,6 +8,10 @@ import tfc.gestorRestaurante.models.entity.Pedido;
 import java.util.List;
 
 
+/**
+ * Repositorio para la entidad Pedido.
+ * Extiende de CrudRepository para obtener métodos CRUD.
+ */
 @Repository
 @Hidden
 public interface IPedidoRepository extends CrudRepository<Pedido, Long>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import tfc.gestorRestaurante.dto.DetallePedido.DetallePedidoDTO;
 import tfc.gestorRestaurante.dto.Pedido.PedidoDTO;
 import tfc.gestorRestaurante.dto.Producto.ProductoDTO;
+import tfc.gestorRestaurante.exception.Pedido.PedidoNotFoundException;
 import tfc.gestorRestaurante.mappers.Pedido.PedidoMapper;
 import tfc.gestorRestaurante.mappers.Producto.ProductoMapper;
 import tfc.gestorRestaurante.mappers.UserMapper;
@@ -65,6 +66,9 @@ public class GestorRestauranteController
     @GetMapping("/getPedidoBy/{id}")
     public ResponseEntity<PedidoDTO> getPedidoById(@PathVariable Long id) {
         PedidoDTO pedido = pedidoService.findPedidoById(id);
+        if (pedido == null) {
+            throw new PedidoNotFoundException("No se encontró un pedido con el ID: " + id);
+        }
         return new ResponseEntity<>(pedido, HttpStatus.OK);
     }
 

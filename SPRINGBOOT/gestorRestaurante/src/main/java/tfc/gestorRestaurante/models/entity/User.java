@@ -16,6 +16,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Clase que representa la entidad User.
+ * Se utiliza para mapear los datos de la tabla user de la base de datos.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

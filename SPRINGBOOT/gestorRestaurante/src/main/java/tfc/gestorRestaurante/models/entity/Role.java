@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Clase que representa la entidad Role.
+ * Se utiliza para mapear los datos de la tabla rol de la base de datos.
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

@@ -6,6 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Clase que representa la entidad DetallePedido.
+ * Se utiliza para mapear los datos de la tabla detallePedido de la base de datos.
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

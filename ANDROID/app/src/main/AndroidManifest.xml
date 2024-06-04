@@ -42,7 +42,9 @@
             android:exported="false" />
         <activity
             android:name=".WorkerMainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
+
         <activity
             android:name=".SignUp"
             android:exported="false" />

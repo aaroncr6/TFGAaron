@@ -1,7 +1,5 @@
 package tfc.gestorRestaurante.security;
 
-
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -32,6 +30,9 @@ import java.util.List;
 import static jakarta.servlet.DispatcherType.ERROR;
 import static jakarta.servlet.DispatcherType.FORWARD;
 
+/**
+ * Clase de configuración de seguridad para la aplicación Spring Security basada en JWT.
+ */
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -50,22 +51,38 @@ public class SecurityConfig
     @Autowired
     private JwtAuthEntryPoint unauthorizedHandler;
 
+    /**
+     * Bean para la implementación de UserDetailsService.
+     * @return Implementación de UserDetailsService.
+     */
     @Bean
     UserDetailsService userDetailsService() {
         return username -> userService.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 
+    /**
+     * Bean para el codificador de contraseñas a utilizar en la aplicación.
+     * @return Instancia de BCryptPasswordEncoder.
+     */
     @Bean
     BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * Bean para el administrador de autenticación.
+     * @return Instancia de AuthenticationManager.
+     */
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
 
+    /**
+     * Bean para el proveedor de autenticación.
+     * @return Instancia de AuthenticationProvider.
+     */
     @Bean
     AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
@@ -76,6 +93,10 @@ public class SecurityConfig
         return authProvider;
     }
 
+    /**
+     * Bean para la cadena de filtros de seguridad.
+     * @return Instancia de SecurityFilterChain.
+     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
@@ -88,7 +109,6 @@ public class SecurityConfig
                                 .requestMatchers("/auth/").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/api/books").hasAnyRole(ERole.ADMIN.name(), ERole.CLIENT.name())
                                 .requestMatchers(HttpMethod.POST,"/api/books/").hasAnyRole(ERole.ADMIN.name(), ERole.CLIENT.name())
-                                //.requestMatchers(HttpMethod.POST, "/api/books/**").hasAnyRole(ERole.GUEST.name(), ERole.USER.name())
                                 .requestMatchers("/users/").hasAnyRole(ERole.ADMIN.name(), ERole.CLIENT.name(), ERole.WORKER.name())
                                 .anyRequest().permitAll()
                 );
@@ -99,6 +119,10 @@ public class SecurityConfig
         return http.build();
     }
 
+    /**
+     * Bean para la configuración de CORS.
+     * @return Instancia de CorsConfigurationSource.
+     */
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();

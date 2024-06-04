@@ -1,145 +1,395 @@
-2024-06-01 16:50:41.491 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 17824 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
-2024-06-01 16:50:41.502 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-06-01 16:50:41.549 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-01 16:50:41.551 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-01 16:50:42.735 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-01 16:50:42.822 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
-2024-06-01 16:50:43.594 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
-2024-06-01 16:50:43.613 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-2024-06-01 16:50:43.613 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-06-01 16:50:43.674 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-2024-06-01 16:50:43.675 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2123 ms
-2024-06-01 16:50:43.868 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-01 16:50:44.000 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-01 16:50:44.084 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-06-01 16:50:44.144 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
-2024-06-01 16:50:44.477 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-01 16:50:44.511 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-2024-06-01 16:50:44.606 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@79aeaaac
-2024-06-01 16:50:44.608 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-2024-06-01 16:50:45.831 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-01 16:50:45.909 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-01 16:50:46.457 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit> - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-06-01 16:50:47.680 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c8cf9d6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2508a6e8, org.springframework.security.web.context.SecurityContextHolderFilter@4bdad732, org.springframework.security.web.header.HeaderWriterFilter@7499359d, org.springframework.security.web.authentication.logout.LogoutFilter@3c3d1355, tfc.gestorRestaurante.security.JwtAuthenticationFilter@72ebdb2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36bf1ca5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a77c7f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70b5174c, org.springframework.security.web.session.SessionManagementFilter@7952e7be, org.springframework.security.web.access.ExceptionTranslationFilter@5a63a539, org.springframework.security.web.access.intercept.AuthorizationFilter@61310b84]
-2024-06-01 16:50:48.140 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-2024-06-01 16:50:48.185 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
-2024-06-01 16:50:48.194 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarted - Started GestorRestauranteApplication in 7.482 seconds (process running for 8.933)
-2024-06-01 16:51:21.580 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-01 16:51:21.580 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-06-01 16:51:21.582 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
-2024-06-01 16:51:21.900 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 16:51:21.927 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 16:51:22.002 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 16:51:22.150 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 16:51:22.284 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 16:51:22.472 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 17:09:08.045 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 17:09:08.047 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 17:09:08.136 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 17:09:08.211 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 17:09:08.232 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 17:09:08.347 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 17:11:08.768 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 17:11:08.770 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 17:11:08.841 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 17:11:08.941 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 17:11:08.961 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 17:11:09.069 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 17:16:09.889 [http-nio-8080-exec-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 629 ms
-2024-06-01 18:18:49.987 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 18:19:25.094 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 18:19:25.097 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 18:19:25.187 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 18:19:25.217 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 18:19:25.251 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 18:19:26.764 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 18:19:27.977 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0 where p1_0.`id`=?
-2024-06-01 18:19:36.250 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0 where p1_0.`id`=?
-2024-06-01 18:19:39.393 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0 where p1_0.`id`=?
-2024-06-01 18:19:39.458 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - update `producto` set `descripcion`=?,`image`=?,`ingredientes`=?,`nombre`=?,`nombre_categoria`=?,`precio`=? where `id`=?
-2024-06-01 18:19:39.712 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 18:51:56.839 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 18:51:56.841 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 18:51:56.930 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 18:51:56.993 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 18:51:57.026 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 18:51:58.810 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 18:52:07.515 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0
-2024-06-01 18:52:07.523 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:52:07.532 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:52:07.535 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:53:38.655 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 18:53:38.657 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 18:53:38.744 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 18:53:38.831 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 18:53:38.850 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 18:53:40.571 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0
-2024-06-01 18:53:40.573 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:53:40.578 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:53:40.583 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:57:39.285 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0
-2024-06-01 18:57:39.286 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:57:39.290 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 18:57:39.295 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 19:20:11.940 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m42s560ms949µs100ns).
-2024-06-01 19:58:36.643 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 19:58:36.654 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 19:58:36.731 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 19:58:36.784 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 19:58:36.891 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 19:58:37.025 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 19:58:39.324 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0 left join `user` u1_0 on u1_0.`id`=p1_0.`user_id` where u1_0.`id`=?
-2024-06-01 19:58:39.328 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 19:59:36.355 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 19:59:36.357 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 19:59:36.430 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 19:59:36.524 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 19:59:36.550 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 19:59:36.677 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 19:59:38.290 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0 left join `user` u1_0 on u1_0.`id`=p1_0.`user_id` where u1_0.`id`=?
-2024-06-01 19:59:38.293 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:00:53.128 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 20:00:53.129 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 20:00:53.201 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 20:00:53.273 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 20:00:53.296 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 20:00:53.421 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 20:20:20.229 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 20:20:20.232 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 20:20:20.303 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 20:20:20.325 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 20:20:20.343 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 20:20:20.446 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 20:26:36.596 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:26:36.626 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - insert into `pedido` (`estado`,`fecha_fin`,`fecha_inicio`,`total_pedido`,`user_id`) values (?,?,?,?,?)
-2024-06-01 20:26:36.643 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - insert into `detalle_pedido` (`cantidad_detalle_pedido`,`pedido_id`,`precio_detalle_pedido`,`producto_id`) values (?,?,?,?)
-2024-06-01 20:26:36.646 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - insert into `detalle_pedido` (`cantidad_detalle_pedido`,`pedido_id`,`precio_detalle_pedido`,`producto_id`) values (?,?,?,?)
-2024-06-01 20:26:36.846 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 20:39:42.526 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
-2024-06-01 20:39:42.528 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
-2024-06-01 20:39:42.601 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 20:39:42.649 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id` from `user` u1_0 where u1_0.`email`=?
-2024-06-01 20:39:42.663 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - SELECT ur.role_id FROM user u          INNER JOIN user_role ur ON u.id = ur.user_id WHERE u.id = ?
-2024-06-01 20:39:44.661 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 20:39:48.560 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - insert into `producto` (`descripcion`,`image`,`ingredientes`,`nombre`,`nombre_categoria`,`precio`) values (?,?,?,?,?,?)
-2024-06-01 20:39:48.615 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0
-2024-06-01 20:39:50.432 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`descripcion`,p1_0.`image`,p1_0.`ingredientes`,p1_0.`nombre`,p1_0.`nombre_categoria`,p1_0.`precio` from `producto` p1_0 where p1_0.`id`=?
-2024-06-01 20:40:09.455 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0
-2024-06-01 20:40:09.458 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:09.461 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:09.464 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:19.233 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `pedido` p1_0 left join `user` u1_0 on u1_0.`id`=p1_0.`user_id` left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where p1_0.`id`=?
-2024-06-01 20:40:19.237 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - update `pedido` set `estado`=?,`fecha_fin`=? where `id`=?
-2024-06-01 20:40:19.267 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0
-2024-06-01 20:40:19.268 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:19.270 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:19.273 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:22.326 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `pedido` p1_0 left join `user` u1_0 on u1_0.`id`=p1_0.`user_id` left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where p1_0.`id`=?
-2024-06-01 20:40:22.329 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - update `pedido` set `estado`=?,`fecha_fin`=? where `id`=?
-2024-06-01 20:40:22.357 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select p1_0.`id`,p1_0.`estado`,p1_0.`fecha_fin`,p1_0.`fecha_inicio`,p1_0.`total_pedido`,p1_0.`user_id` from `pedido` p1_0
-2024-06-01 20:40:22.360 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:22.363 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 20:40:22.366 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`city`,u1_0.`creation_date`,u1_0.`email`,u1_0.`last_login`,u1_0.`name`,u1_0.`nif`,u1_0.`password`,u1_0.`postal_code`,u1_0.`username`,r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user` u1_0 left join `user_role` r1_0 on u1_0.`id`=r1_0.`user_id` left join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where u1_0.`id`=?
-2024-06-01 21:28:52.015 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-01 21:28:52.034 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-2024-06-01 21:28:52.038 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2024-06-05 00:00:52.127 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 12 class path changes (0 additions, 12 deletions, 0 modifications)
+2024-06-05 00:00:52.139 [Thread-31] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:00:52.140 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-8 - Shutdown initiated...
+2024-06-05 00:00:52.146 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-8 - Shutdown completed.
+2024-06-05 00:00:52.300 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:00:52.300 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:00:52.841 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:00:52.871 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 5 JPA repository interfaces.
+2024-06-05 00:00:53.069 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:00:53.070 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:00:53.072 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:00:53.113 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:00:53.113 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 811 ms
+2024-06-05 00:00:53.179 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:00:53.184 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:00:53.189 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:00:53.191 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-9 - Starting...
+2024-06-05 00:00:53.196 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-9 - Added connection org.mariadb.jdbc.Connection@4bb4d18f
+2024-06-05 00:00:53.196 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-9 - Start completed.
+2024-06-05 00:00:53.327 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:00:53.368 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:00:53.381 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationController' defined in file [C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes\tfc\gestorRestaurante\controllers\AuthenticationController.class]: Post-processing of merged bean definition failed
+2024-06-05 00:00:53.381 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:00:53.383 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-9 - Shutdown initiated...
+2024-06-05 00:00:53.399 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-9 - Shutdown completed.
+2024-06-05 00:00:53.401 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2024-06-05 00:00:53.406 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-05 00:00:53.412 [restartedMain] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationController' defined in file [C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes\tfc\gestorRestaurante\controllers\AuthenticationController.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:577)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tfc.gestorRestaurante.GestorRestauranteApplication.main(GestorRestauranteApplication.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [tfc.gestorRestaurante.controllers.AuthenticationController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@39fc958c]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:757)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:689)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:376)
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:574)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: tfc/gestorRestaurante/security/JwtTokenProvider
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3473)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2542)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:752)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: tfc.gestorRestaurante.security.JwtTokenProvider
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 29 common frames omitted
+2024-06-05 00:00:55.892 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:00:55.892 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:00:56.461 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:00:56.520 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2024-06-05 00:00:56.828 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:00:56.830 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:00:56.830 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:00:56.849 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:00:56.849 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 953 ms
+2024-06-05 00:00:56.932 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05 00:00:56.978 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:00:56.982 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:00:56.988 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:00:56.990 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-10 - Starting...
+2024-06-05 00:00:56.994 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-10 - Added connection org.mariadb.jdbc.Connection@8746875
+2024-06-05 00:00:56.995 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-10 - Start completed.
+2024-06-05 00:00:57.135 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:00:57.167 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:00:57.808 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6835545b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55e76070, org.springframework.security.web.context.SecurityContextHolderFilter@61c7a730, org.springframework.security.web.header.HeaderWriterFilter@2ea15f28, org.springframework.security.web.authentication.logout.LogoutFilter@591c8e7b, tfc.gestorRestaurante.security.JwtAuthenticationFilter@3d054cb6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d29f54c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79d5a9de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72d170d6, org.springframework.security.web.session.SessionManagementFilter@75e13ed9, org.springframework.security.web.access.ExceptionTranslationFilter@1e345cd8, org.springframework.security.web.access.intercept.AuthorizationFilter@1f424867]
+2024-06-05 00:00:58.098 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-05 00:00:58.115 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-05 00:00:58.119 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarted - Started GestorRestauranteApplication in 2.317 seconds (process running for 15049.238)
+2024-06-05 00:00:58.121 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-05 00:07:31.417 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 12 class path changes (0 additions, 12 deletions, 0 modifications)
+2024-06-05 00:07:31.425 [Thread-37] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:07:31.426 [Thread-37] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-10 - Shutdown initiated...
+2024-06-05 00:07:31.431 [Thread-37] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-10 - Shutdown completed.
+2024-06-05 00:07:31.572 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:07:31.573 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:07:32.009 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:07:32.024 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2024-06-05 00:07:32.333 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:07:32.335 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:07:32.336 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:07:32.359 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:07:32.360 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 783 ms
+2024-06-05 00:07:32.462 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05 00:07:32.543 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:07:32.549 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:07:32.556 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:07:32.558 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-11 - Starting...
+2024-06-05 00:07:32.567 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-11 - Added connection org.mariadb.jdbc.Connection@e41ea07
+2024-06-05 00:07:32.568 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-11 - Start completed.
+2024-06-05 00:07:32.595 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:07:32.596 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:07:33.066 [restartedMain] ERROR o.s.b.w.e.tomcat.TomcatStarter.onStartup - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'jwtService': Error creating bean with name 'jwtTokenProvider': Lookup method resolution failed
+2024-06-05 00:07:33.070 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2024-06-05 00:07:33.073 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase.log - The web application [ROOT] appears to have started a thread named [HikariPool-11 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 00:07:33.073 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase.log - The web application [ROOT] appears to have started a thread named [HikariPool-11 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-05 00:07:33.074 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-06-05 00:07:33.074 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:07:33.075 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-11 - Shutdown initiated...
+2024-06-05 00:07:33.079 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-11 - Shutdown completed.
+2024-06-05 00:07:33.083 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-05 00:07:33.087 [restartedMain] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at tfc.gestorRestaurante.GestorRestauranteApplication.main(GestorRestauranteApplication.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:145)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'jwtService': Error creating bean with name 'jwtTokenProvider': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4866)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:497)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:367)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1294)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 58 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [tfc.gestorRestaurante.security.JwtTokenProvider] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5a66cfd4]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:475)
+	... 71 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: tfc/gestorRestaurante/models/entity/User
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2676)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 73 common frames omitted
+Caused by: java.lang.ClassNotFoundException: tfc.gestorRestaurante.models.entity.User
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 77 common frames omitted
+2024-06-05 00:07:35.019 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:07:35.019 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:07:35.474 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:07:35.515 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 41 ms. Found 5 JPA repository interfaces.
+2024-06-05 00:07:35.834 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:07:35.836 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:07:35.837 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:07:35.867 [restartedMain] INFO  o.a.c.c.C.[Tomcat-4].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:07:35.867 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 844 ms
+2024-06-05 00:07:35.961 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05 00:07:36.037 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:07:36.042 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:07:36.050 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:07:36.053 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-12 - Starting...
+2024-06-05 00:07:36.058 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-12 - Added connection org.mariadb.jdbc.Connection@266ec426
+2024-06-05 00:07:36.059 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-12 - Start completed.
+2024-06-05 00:07:36.226 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:07:36.263 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:07:37.055 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56c0b0a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6aec6008, org.springframework.security.web.context.SecurityContextHolderFilter@5d17cfed, org.springframework.security.web.header.HeaderWriterFilter@642c38b6, org.springframework.security.web.authentication.logout.LogoutFilter@3141ba3e, tfc.gestorRestaurante.security.JwtAuthenticationFilter@4d76a13f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@307801c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@359476f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@154a873a, org.springframework.security.web.session.SessionManagementFilter@18cfeecb, org.springframework.security.web.access.ExceptionTranslationFilter@2d780f5b, org.springframework.security.web.access.intercept.AuthorizationFilter@57721ef0]
+2024-06-05 00:07:37.398 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-05 00:07:37.423 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-05 00:07:37.429 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarted - Started GestorRestauranteApplication in 2.467 seconds (process running for 15448.547)
+2024-06-05 00:07:37.431 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-05 00:15:51.755 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2024-06-05 00:15:51.764 [Thread-44] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:15:51.767 [Thread-44] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-12 - Shutdown initiated...
+2024-06-05 00:15:51.771 [Thread-44] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-12 - Shutdown completed.
+2024-06-05 00:15:51.934 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:15:51.934 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:15:52.949 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:15:53.013 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+2024-06-05 00:15:53.623 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:15:53.626 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:15:53.627 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:15:53.654 [restartedMain] INFO  o.a.c.c.C.[Tomcat-4].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:15:53.655 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1716 ms
+2024-06-05 00:15:53.788 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05 00:15:53.873 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:15:53.880 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:15:53.890 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:15:53.893 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-13 - Starting...
+2024-06-05 00:15:53.901 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-13 - Added connection org.mariadb.jdbc.Connection@37e2eed7
+2024-06-05 00:15:53.903 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-13 - Start completed.
+2024-06-05 00:15:54.199 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:15:54.226 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:15:54.920 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationController': Unsatisfied dependency expressed through field 'userMapper': No qualifying bean of type 'tfc.gestorRestaurante.mappers.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-06-05 00:15:54.921 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:15:54.922 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-13 - Shutdown initiated...
+2024-06-05 00:15:54.923 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-13 - Shutdown completed.
+2024-06-05 00:15:54.924 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2024-06-05 00:15:54.932 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-05 00:15:54.940 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in tfc.gestorRestaurante.controllers.AuthenticationController required a bean of type 'tfc.gestorRestaurante.mappers.UserMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'tfc.gestorRestaurante.mappers.UserMapper' in your configuration.
+
+2024-06-05 00:15:56.436 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:15:56.436 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:15:56.967 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:15:57.022 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 54 ms. Found 5 JPA repository interfaces.
+2024-06-05 00:15:57.301 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:15:57.303 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:15:57.303 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:15:57.323 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:15:57.323 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 884 ms
+2024-06-05 00:15:57.393 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05 00:15:57.453 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:15:57.456 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:15:57.468 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:15:57.469 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-14 - Starting...
+2024-06-05 00:15:57.474 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-14 - Added connection org.mariadb.jdbc.Connection@28a9fd58
+2024-06-05 00:15:57.474 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-14 - Start completed.
+2024-06-05 00:15:57.613 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:15:57.649 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:15:58.268 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a9ae462, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f9a080c, org.springframework.security.web.context.SecurityContextHolderFilter@66dcd7fd, org.springframework.security.web.header.HeaderWriterFilter@5fd5430f, org.springframework.security.web.authentication.logout.LogoutFilter@379256f3, tfc.gestorRestaurante.security.JwtAuthenticationFilter@7c354f0f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b85fbf1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ebd0eb5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f4aca0d, org.springframework.security.web.session.SessionManagementFilter@5c80b2b7, org.springframework.security.web.access.ExceptionTranslationFilter@69c29cd3, org.springframework.security.web.access.intercept.AuthorizationFilter@53217ef]
+2024-06-05 00:15:58.587 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-05 00:15:58.608 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-05 00:15:58.613 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarted - Started GestorRestauranteApplication in 2.216 seconds (process running for 15949.731)
+2024-06-05 00:15:58.615 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-05 00:20:16.776 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2024-06-05 00:20:16.784 [Thread-51] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:20:16.785 [Thread-51] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-14 - Shutdown initiated...
+2024-06-05 00:20:16.788 [Thread-51] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-14 - Shutdown completed.
+2024-06-05 00:20:16.927 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStarting - Starting GestorRestauranteApplication using Java 21.0.2 with PID 2536 (C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes started by ACR in C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante)
+2024-06-05 00:20:16.927 [restartedMain] INFO  t.g.GestorRestauranteApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:20:17.538 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05 00:20:17.580 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 42 ms. Found 5 JPA repository interfaces.
+2024-06-05 00:20:17.925 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-05 00:20:17.927 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-05 00:20:17.928 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-05 00:20:17.953 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:20:17.954 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1023 ms
+2024-06-05 00:20:18.175 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05 00:20:18.268 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05 00:20:18.274 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-05 00:20:18.282 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05 00:20:18.284 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-15 - Starting...
+2024-06-05 00:20:18.291 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-15 - Added connection org.mariadb.jdbc.Connection@4e983ae4
+2024-06-05 00:20:18.291 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-15 - Start completed.
+2024-06-05 00:20:18.509 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-05 00:20:18.558 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:20:19.313 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gestorRestauranteController': Unsatisfied dependency expressed through field 'pedidoService': Error creating bean with name 'pedidoService' defined in file [C:\Users\ACR\Desktop\TFC\AARON\SPRINGBOOT\gestorRestaurante\target\classes\tfc\gestorRestaurante\models\services\Pedido\PedidoService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'tfc.gestorRestaurante.mappers.Pedido.PedidoMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-06-05 00:20:19.314 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05 00:20:19.315 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-15 - Shutdown initiated...
+2024-06-05 00:20:19.317 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-15 - Shutdown completed.
+2024-06-05 00:20:19.317 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2024-06-05 00:20:19.322 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-05 00:20:19.329 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in tfc.gestorRestaurante.models.services.Pedido.PedidoService required a bean of type 'tfc.gestorRestaurante.mappers.Pedido.PedidoMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'tfc.gestorRestaurante.mappers.Pedido.PedidoMapper' in your configuration.
+

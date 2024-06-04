@@ -46,6 +46,7 @@
     <string name="barraBusqueda">Search</string>
     <string name="volver_button_user_carrito">Back</string>
     <string name="realizar_pedido_button">Place Order</string>
+    <string name="action_logout">Log Out</string>
 
 
 

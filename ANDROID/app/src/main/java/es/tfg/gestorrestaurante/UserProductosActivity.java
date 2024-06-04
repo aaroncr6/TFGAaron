@@ -93,6 +93,7 @@ public class UserProductosActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_user_historialpedido, menu);
+        getMenuInflater().inflate(R.menu.menu_logout, menu); // Añade el menú de logout
         return true;
     }
 
@@ -104,8 +105,27 @@ public class UserProductosActivity extends AppCompatActivity {
             Intent intent = new Intent(this, UserHistorialPedidoActivity.class);
             startActivity(intent);
             return true;
+        } else if (id == R.id.action_logout) { // Añade el caso de logout
+            logout();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void logout() {
+        // Aquí puedes agregar el código para cerrar la sesión del usuario
+
+        // Crea un nuevo intent para la actividad de login
+        Intent intent = new Intent(this, Login.class);
+
+        // Establece la bandera para limpiar la pila de actividades
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+        // Inicia la actividad de login
+        startActivity(intent);
+
+        // Finaliza la actividad actual
+        finish();
     }
 }

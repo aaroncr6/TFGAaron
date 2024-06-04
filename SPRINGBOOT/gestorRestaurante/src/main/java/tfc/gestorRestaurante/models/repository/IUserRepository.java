@@ -11,6 +11,10 @@ import tfc.gestorRestaurante.models.entity.User;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Repositorio para la entidad User.
+ * Extiende de CrudRepository para obtener métodos CRUD.
+ */
 @Repository
 @Hidden
 public interface IUserRepository extends CrudRepository<User, Long>

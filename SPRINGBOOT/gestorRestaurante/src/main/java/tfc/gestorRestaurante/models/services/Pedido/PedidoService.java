@@ -16,6 +16,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Clase de servicio que implementa la interfaz IPedidoService.
+ * Proporciona métodos para manipular y obtener información de los pedidos.
+ */
 @Service
 @Transactional
 public class PedidoService implements IPedidoService {
@@ -29,12 +33,21 @@ public class PedidoService implements IPedidoService {
     @Autowired
     private DetallePedidoService detallePedidoService;
 
+    /**
+     * Constructor de la clase PedidoService.
+     * @param pedidoRepository Repositorio para acceder a los datos de los pedidos.
+     * @param pedidoMapper Mapper para convertir entre Pedido y PedidoDTO.
+     */
     @Autowired
     public PedidoService(IPedidoRepository pedidoRepository, PedidoMapper pedidoMapper) {
         this.pedidoRepository = pedidoRepository;
         this.pedidoMapper = pedidoMapper;
     }
 
+    /**
+     * Obtiene todos los pedidos.
+     * @return Una lista de PedidoDTO.
+     */
     @Override
     @Transactional
     public List<PedidoDTO> getAllPedidos() {
@@ -42,6 +55,12 @@ public class PedidoService implements IPedidoService {
         return pedidoMapper.toDTOList(pedidos);
     }
 
+    /**
+     * Encuentra un pedido por su ID.
+     * @param id El ID del pedido a encontrar.
+     * @return Un PedidoDTO del pedido encontrado.
+     * @throws RuntimeException si no se encuentra el pedido.
+     */
     @Override
     @Transactional
     public PedidoDTO findPedidoById(Long id) {
@@ -50,6 +69,11 @@ public class PedidoService implements IPedidoService {
         return pedidoMapper.toDTO(pedido);
     }
 
+    /**
+     * Crea un nuevo pedido.
+     * @param pedidoDTO El DTO del pedido a crear.
+     * @return Un PedidoDTO del pedido creado.
+     */
     @Override
     @Transactional
     public PedidoDTO createPedido(PedidoDTO pedidoDTO) {
@@ -61,27 +85,31 @@ public class PedidoService implements IPedidoService {
         if (detallesPedidoDTO != null) {
             for (DetallePedidoDTO detallePedidoDTO : detallesPedidoDTO) {
                 detallePedidoDTO.setIdPedido(savedPedido.getId());
-                //DetallePedido detallePedido = detallePedidoMapper.fromDTO(detallePedidoDTO);
                 detallePedidoService.createDetallePedido(detallePedidoDTO);
             }
         }
 
-
-
         return pedidoMapper.toDTO(savedPedido);
     }
 
+    /**
+     * Actualiza un pedido existente.
+     * @param id El ID del pedido a actualizar.
+     * @param pedidoDTO El DTO del pedido con los datos actualizados.
+     * @return Un PedidoDTO del pedido actualizado.
+     * @throws RuntimeException si no se encuentra el pedido.
+     */
     @Override
     @Transactional
     public PedidoDTO updatePedido(Long id, PedidoDTO pedidoDTO) {
         Pedido existingPedido = pedidoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Pedido no encontrado"));
 
-        if(pedidoDTO.getTotalPedido() != 0){
+        if (pedidoDTO.getTotalPedido() != 0) {
             existingPedido.setTotalPedido(pedidoDTO.getTotalPedido());
         }
         existingPedido.setEstado(pedidoDTO.getEstado());
-        if(pedidoDTO.getFechaFin() != null){
+        if (pedidoDTO.getFechaFin() != null) {
             existingPedido.setFechaFin(pedidoDTO.getFechaFin());
         }
 
@@ -89,17 +117,24 @@ public class PedidoService implements IPedidoService {
         return pedidoMapper.toDTO(updatedPedido);
     }
 
+    /**
+     * Elimina un pedido.
+     * @param id El ID del pedido a eliminar.
+     */
     @Override
     @Transactional
     public void deletePedido(Long id) {
         pedidoRepository.deleteById(id);
     }
 
+    /**
+     * Obtiene todos los pedidos por el ID de un usuario.
+     * @param userId El ID del usuario.
+     * @return Una lista de PedidoDTO que representa todos los pedidos para el usuario dado.
+     */
     @Override
     public List<PedidoDTO> findPedidosByUserId(Long userId) {
         List<Pedido> pedidos = pedidoRepository.findPedidosByUserId(userId);
         return pedidos.stream().map(pedidoMapper::toDTO).collect(Collectors.toList());
     }
-
-
 }

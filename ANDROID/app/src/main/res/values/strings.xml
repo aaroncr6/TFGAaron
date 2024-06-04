@@ -45,6 +45,7 @@
     <string name="barraBusqueda">Buscar</string>
     <string name="volver_button_user_carrito">Volver</string>
     <string name="realizar_pedido_button">Realizar Pedido</string>
+    <string name="action_logout">Cerrar Sesión</string>
 
 
 

@@ -12,6 +12,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Clase que representa la entidad Pedido.
+ * Se utiliza para mapear los datos de la tabla pedido de la base de datos.
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

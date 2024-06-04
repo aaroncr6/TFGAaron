@@ -2,6 +2,7 @@ package es.tfg.gestorrestaurante;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -58,7 +59,7 @@ public class AdminEditProduct extends AppCompatActivity {
 
                 @Override
                 public void onError(UtilREST.Response response) {
-                    Toast.makeText(AdminEditProduct.this, "Error al cargar el producto: " + response.exception, Toast.LENGTH_SHORT).show();
+                    showToast("Error al cargar el producto: " + response.exception);
                 }
             });
         }
@@ -82,14 +83,14 @@ public class AdminEditProduct extends AppCompatActivity {
                 API.updateProductById(productId, updatedProduct, new UtilREST.OnResponseListener() {
                     @Override
                     public void onSuccess(UtilREST.Response response) {
-                        Toast.makeText(AdminEditProduct.this, "Producto actualizado con éxito", Toast.LENGTH_SHORT).show();
+                        showToast("Producto actualizado con éxito");
                         setResult(RESULT_OK);
                         finish();
                     }
 
                     @Override
                     public void onError(UtilREST.Response response) {
-                        Toast.makeText(AdminEditProduct.this, "Error al actualizar el producto: " + response.exception, Toast.LENGTH_SHORT).show();
+                        showToast("Error al actualizar el producto: " + response.exception);
                     }
                 });
             }
@@ -101,5 +102,25 @@ public class AdminEditProduct extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void showToast(String message) {
+        // Crea el layout inflater
+        LayoutInflater inflater = getLayoutInflater();
+
+        // Infla el layout desde xml
+        View layout = inflater.inflate(R.layout.custom_toast, null);
+
+        // Obtiene el TextView y establece el mensaje
+        TextView toastText = layout.findViewById(R.id.toastMessage);
+        toastText.setText(message);
+
+        // Crea el nuevo toast
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+
+        // Muestra el toast
+        toast.show();
     }
 }
