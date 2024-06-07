@@ -15,6 +15,10 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+/**
+ * Clase de prueba para PedidoService.
+ * Esta clase utiliza la extensión Mockito para simular las dependencias.
+ */
 @ExtendWith(MockitoExtension.class)
 public class PedidoServiceTest {
 
@@ -29,6 +33,9 @@ public class PedidoServiceTest {
 
     /**
      * Prueba del método findPedidoById, de la clase PedidoService.
+     * Esta prueba verifica que el método findPedidoById devuelve el PedidoDTO esperado para un id dado.
+     * Se crea un Pedido y PedidoDTO de prueba con el mismo id, y se simula la respuesta del repositorio y del mapeador.
+     * Luego se compara el resultado del método con el id esperado.
      */
     @Test
     public void testFindPedidoById() {
@@ -39,11 +46,14 @@ public class PedidoServiceTest {
         PedidoDTO pedidoDTO = new PedidoDTO();
         pedidoDTO.setId(id);
 
+        // Simulamos la respuesta del repositorio y del mapeador
         when(pedidoRepository.findById(id)).thenReturn(Optional.of(pedido));
         when(pedidoMapper.toDTO(pedido)).thenReturn(pedidoDTO);
 
+        // Llamamos al método que estamos probando
         PedidoDTO result = pedidoService.findPedidoById(id);
 
+        // Verificamos el resultado
         assertEquals(id, result.getId());
     }
 }

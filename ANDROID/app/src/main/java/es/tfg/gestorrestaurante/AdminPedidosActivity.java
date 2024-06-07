@@ -113,7 +113,7 @@ public class AdminPedidosActivity extends AppCompatActivity {
 
             @Override
             public void onError(UtilREST.Response response) {
-                showToast("Error al actualizar el estado del pedido: " + response.exception);
+                showToast("toast_adminPedidos_uploadStatus_error" + response.exception);
             }
         });
     }
@@ -143,7 +143,7 @@ public class AdminPedidosActivity extends AppCompatActivity {
 
             @Override
             public void onError(UtilREST.Response response) {
-                showToast("Error al obtener los pedidos: " + response.exception);
+                showToast("toast_adminPedidos_uploadOrder_error" + response.exception);
             }
         });
     }
@@ -163,7 +163,7 @@ public class AdminPedidosActivity extends AppCompatActivity {
         pedidoAdapter.notifyDataSetChanged();
     }
 
-    private void showToast(String message) {
+    private void showToast(String messageKey) {
         // Crea el layout inflater
         LayoutInflater inflater = getLayoutInflater();
 
@@ -172,11 +172,12 @@ public class AdminPedidosActivity extends AppCompatActivity {
 
         // Obtiene el TextView y establece el mensaje
         TextView toastText = layout.findViewById(R.id.toastMessage);
-        toastText.setText(message);
+        String toastMessage = getResources().getString(getResources().getIdentifier(messageKey, "string", getPackageName()));
+        toastText.setText(toastMessage);
 
         // Crea el nuevo toast
         Toast toast = new Toast(getApplicationContext());
-        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
 
         // Muestra el toast

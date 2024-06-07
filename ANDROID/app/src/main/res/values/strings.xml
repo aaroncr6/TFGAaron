@@ -38,6 +38,7 @@
     <string name="login_button">Iniciar sesión</string>
     <string name="signup_button">Registrarse</string>
     <string name="signup_text">Registrarse</string>
+    <string name="signupWorker_text">Registrar Trabajador</string>
     <string name="usuario_signup_hint">Usuario</string>
     <string name="contrasenya_signup_hint">Contraseña</string>
     <string name="register_button">Registrar</string>
@@ -46,6 +47,34 @@
     <string name="volver_button_user_carrito">Volver</string>
     <string name="realizar_pedido_button">Realizar Pedido</string>
     <string name="action_logout">Cerrar Sesión</string>
+    <string name="admin_create_worker">Registrar Trabajador</string>
+    <string name ="menu_about_tfg">Acerca de tfg</string>
+    <string name="menu_user_historial_pedido">Historial Pedido</string>
+    <string name="btn_user_carrito">Carrito</string>
+    <string name="btn_admin_productos">Productos</string>
+    <string name="btn_admin_pedidos">Pedidos</string>
+    <string name="check_box_text">Recordar usuario</string>
+    <string name="txt_TFG">Este proyecto es un Trabajo de Fin de Grado (TFG) desarrollado para el curso de Desarrollo de Aplicaciones Multiplataforma (DAM). La aplicación está diseñada para gestionar un único restaurante, utilizando una API REST implementada con Spring Boot y una aplicación móvil para Android, ambos desarrollados en Java. El objetivo es proporcionar una solución eficiente y práctica para la administración de pedidos y gestión de usuarios en un entorno real.</string>
+    <string name="toast_adminCreateWorker_complete_fields">Complete todos los campos</string>
+    <string name="toast_adminCreateWorker_register_success">Usuario registrado exitosamente</string>
+    <string name="toast_adminCreateWorker_register_error">Error al registrar usuario: </string>
+    <string name="toast_adminEditProduct_updateProduct_succes">Producto actualizado con exito</string>
+    <string name="toast_adminEditProduct_updateProduct_error">Error al actualizar el producto: </string>
+    <string name="toast_adminEditProduct_uploadProduct_error">Error al cargar el producto: </string>
+    <string name="toast_adminPedidos_uploadOrder_error">Error al cargar el pedido: </string>
+    <string name="toast_adminPedidos_uploadStatus_error">Error al actualizar el estado del pedido</string>
+    <string name="toast_adminProductos_ProductDeleted_succes">Producto eliminado</string>
+    <string name="toast_adminProductos_ProductDelete_error">Error al eliminar producto: </string>
+    <string name="toast_adminProductos_ProductNotDeleted">Producto no eliminado</string>
+    <string name="toast_adminProductos_UploadProductos_error">Error al obtener productos: </string>
+    <string name="toast_adminProductos_createProduct_succes">Producto creado con exito</string>
+    <string name="toast_adminProductos_createProduct_error">Error al crear producto: </string>
+    <string name="dialog_title_delete_product">Eliminar producto seleccionado</string>
+    <string name="dialog_message_confirm_delete">¿Estás seguro de eliminar el producto?</string>
+    <string name="dialog_button_yes">Sí</string>
+    <string name="toast_product_deleted_success">Producto eliminado con éxito</string>
+    <string name="toast_product_delete_error">Error al eliminar producto: </string>
+    <string name="dialog_button_no">No</string>
 
 
 

@@ -29,10 +29,11 @@
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/contrasenya_hint"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnLongIn_Login"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +60,6 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="8dp"
         android:text="@string/login_button"
@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnSignUp_Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ptxtContrasenya_Login" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_login" />
 
     <Button
         android:id="@+id/btnSignUp_Login"
@@ -82,4 +82,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLongIn_Login" />
+
+    <CheckBox
+        android:id="@+id/checkBox_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/check_box_text"
+        app:layout_constraintBottom_toTopOf="@+id/btnLongIn_Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptxtContrasenya_Login" />
 </androidx.constraintlayout.widget.ConstraintLayout>

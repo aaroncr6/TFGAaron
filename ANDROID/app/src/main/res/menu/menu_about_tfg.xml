@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_user_historial_pedido"
-        android:title="@string/menu_user_historial_pedido" />
+        android:id="@+id/menu_about_tfg"
+        android:title="@string/menu_about_tfg" />
 </menu>

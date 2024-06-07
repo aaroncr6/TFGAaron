@@ -30,14 +30,13 @@ public class UserProductosActivity extends AppCompatActivity {
     List<Producto> listaProductos;
     Carrito carrito;
 
-    Button btnVolver,btnCarrito;
+    Button btnCarrito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_productos);
 
-        btnVolver = findViewById(R.id.btnVolverMain_user);
         btnCarrito = findViewById(R.id.btnCarrito_user);
 
         lstProductos = findViewById(R.id.lstProductosUser);
@@ -45,9 +44,6 @@ public class UserProductosActivity extends AppCompatActivity {
         listar();
 
 
-        btnVolver.setOnClickListener(v -> {
-            finish();
-        });
 
         btnCarrito.setOnClickListener(v -> {
             if (carrito != null && !carrito.getProductos().isEmpty()) {

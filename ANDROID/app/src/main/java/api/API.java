@@ -10,7 +10,7 @@ import api.UtilREST.*;
 // Proporciona métodos para interactuar con el API RESTful.
 public class API {
 
-    private static final String URL = "http://192.168.1.144:8080/";
+    private static final String URL = "http://192.168.1.149:8080/";
 
 
     // Solicitud GET a la URL de la API para obtener todos los posts.

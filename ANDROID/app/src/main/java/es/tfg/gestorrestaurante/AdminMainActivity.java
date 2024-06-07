@@ -45,6 +45,14 @@ public class AdminMainActivity extends AppCompatActivity {
         }
     });
 
+    btnAdminUsuarios.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(AdminMainActivity.this, AdminCreateWorkerActivity.class);
+            startActivity(intent);
+        }
+    });
+
 
     }
 

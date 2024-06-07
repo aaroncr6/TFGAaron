@@ -59,7 +59,7 @@ public class AdminEditProduct extends AppCompatActivity {
 
                 @Override
                 public void onError(UtilREST.Response response) {
-                    showToast("Error al cargar el producto: " + response.exception);
+                    showToast("toast_adminEditProduct_uploadProduct_error" + response.exception);
                 }
             });
         }
@@ -83,14 +83,14 @@ public class AdminEditProduct extends AppCompatActivity {
                 API.updateProductById(productId, updatedProduct, new UtilREST.OnResponseListener() {
                     @Override
                     public void onSuccess(UtilREST.Response response) {
-                        showToast("Producto actualizado con éxito");
+                        showToast("toast_adminEditProduct_updateProduct_succes");
                         setResult(RESULT_OK);
                         finish();
                     }
 
                     @Override
                     public void onError(UtilREST.Response response) {
-                        showToast("Error al actualizar el producto: " + response.exception);
+                        showToast("toast_adminEditProduct_updateProduct_error" + response.exception);
                     }
                 });
             }
@@ -104,7 +104,7 @@ public class AdminEditProduct extends AppCompatActivity {
         });
     }
 
-    private void showToast(String message) {
+    private void showToast(String messageKey) {
         // Crea el layout inflater
         LayoutInflater inflater = getLayoutInflater();
 
@@ -113,11 +113,12 @@ public class AdminEditProduct extends AppCompatActivity {
 
         // Obtiene el TextView y establece el mensaje
         TextView toastText = layout.findViewById(R.id.toastMessage);
-        toastText.setText(message);
+        String toastMessage = getResources().getString(getResources().getIdentifier(messageKey, "string", getPackageName()));
+        toastText.setText(toastMessage);
 
         // Crea el nuevo toast
         Toast toast = new Toast(getApplicationContext());
-        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
 
         // Muestra el toast
