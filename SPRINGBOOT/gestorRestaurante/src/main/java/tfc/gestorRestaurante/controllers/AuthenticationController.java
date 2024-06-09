@@ -33,6 +33,16 @@ public class AuthenticationController
     @Autowired
     private IUserService userService;
 
+    /**
+     * Metodo que registra un nuevo usuario
+     *
+     * Este método es un endpoint de la API que se encarga de registrar un nuevo usuario.
+     * Se accede a este a través de una petición POST a la ruta "/auth/signup".
+     * El cuerpo de la petición debe contener un objeto RegisterUserDTO que representa el usuario que se desea registrar.
+     *
+     * @param registerUserDto Un objeto RegisterUserDTO que representa el usuario que se desea registrar.
+     * @return Una respuesta HTTP que contiene un mensaje de éxito en el cuerpo y un estado HTTP 200 (OK).
+     */
     @PostMapping("/signup")
     public ResponseEntity<Response> register(@RequestBody RegisterUserDTO registerUserDto)
     {
@@ -45,6 +55,16 @@ public class AuthenticationController
         return new ResponseEntity<Response>(Response.noErrorResponse(message), HttpStatus.OK);
     }
 
+    /**
+     * Metodo que autentica un usuario
+     *
+     * Este método es un endpoint de la API que se encarga de autenticar un usuario.
+     * Se accede a este a través de una petición POST a la ruta "/auth/login".
+     * El cuerpo de la petición debe contener un objeto LoginUserDTO que representa el usuario que se desea autenticar.
+     *
+     * @param loginUserDto Un objeto LoginUserDTO que representa el usuario que se desea autenticar.
+     * @return Una respuesta HTTP que contiene el token JWT en el cuerpo y un estado HTTP 200 (OK).
+     */
     @PostMapping("/login")
     public ResponseEntity<String> authenticate(@RequestBody LoginUserDTO loginUserDto)
     {

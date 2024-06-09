@@ -107,9 +107,6 @@ public class SecurityConfig
                         auth.dispatcherTypeMatchers(FORWARD, ERROR).permitAll()
                                 .requestMatchers("/swagger-ui/", "/v3/api-docs/").permitAll()
                                 .requestMatchers("/auth/").permitAll()
-                                .requestMatchers(HttpMethod.GET, "/api/books").hasAnyRole(ERole.ADMIN.name(), ERole.CLIENT.name())
-                                .requestMatchers(HttpMethod.POST,"/api/books/").hasAnyRole(ERole.ADMIN.name(), ERole.CLIENT.name())
-                                .requestMatchers("/users/").hasAnyRole(ERole.ADMIN.name(), ERole.CLIENT.name(), ERole.WORKER.name())
                                 .anyRequest().permitAll()
                 );
 
