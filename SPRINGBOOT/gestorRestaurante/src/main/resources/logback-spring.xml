@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- Propiedades que se usará para indicar dónde almacenar los logs y cómo se llama el fichero -->
-    <property name="LOG_DIR" value="logs" />
-    <property name="LOG_NAME" value="gestorRestaurante" />
+    <property name="LOG_DIR" value="/home/ubuntu/logs" />
+    <property name="LOG_NAME" value="API-TFG" />
 
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
 
